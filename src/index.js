@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import {ExchangeRate, convert} from './currency.js';
 
-
+// function returnError() {
+  
+// }
 $(document).ready(function() {
   $('#convert1').click(function() {
     let currency = $('#currency').val();
@@ -23,8 +25,8 @@ $(document).ready(function() {
       .then(function(response) {
         const body = response;
         let rate = body.conversion_rates.USD;
-        let usd = $('#userNumber2').val();
         let newVal = convert(usd, rate);
+        let usd = $('#userNumber2').val();
         $("#conversion2").html(newVal);
       });
   });

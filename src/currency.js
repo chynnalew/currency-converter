@@ -2,7 +2,9 @@ export class ExchangeRate {
   static getRates(currency) {
     return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`)
       .then(function(response) {
-        if(!response.ok) {
+        if(response.status === 404) {
+          throw Error("not a currency");
+        } else if(!response.ok){
           throw Error(response.status);
         }
         return response.json();

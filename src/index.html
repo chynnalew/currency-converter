@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Currency Exchange</title>
 </head>
 <body>
-  
+  <div id="header">
+    <h1>Currency Converter</h1>
+  </div>
+  <div class="card">
+    <h2>United States Dollar Converter</h2>
+    <div id="dropdown">
+      <label for="drop">USD to </label>
+      <select name="drop" id="currency">
+        <option value="EUR">EUR (Europe - Euro)</option>
+        <option value="JPY">JYP (Japan - Yen)</option>
+        <option value="GBP">GBP (United Kingdom - Pound Sterling)</option>
+        <option value="CAD">CAD (Canada - Dollar)</option>
+        <option value="CHF">CHF (Switzerland - Franc)</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <input type="number" id="userNumber1">
+      </div>
+      <div class="col-6" id="conversion1"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Conversion by Currency Code</h2>
+    <div id="userEntered">
+      <label for="input">USD to </label>
+      <input type="text" name="input">
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <input type="number" id="userNumber2">
+      </div>
+      <div class="col-6" id="conversion2"></div>
+    </div>
+  </div>
+
 </body>
 </html>

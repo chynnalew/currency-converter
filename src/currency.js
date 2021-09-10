@@ -1,7 +1,7 @@
 export class ExchangeRate {  
-  static getRates() {
+  static getRates(currency) {
     return new Promise(function(resolve, reject) {
-      let request = new XMLHttpRequest(currency);
+      let request = new XMLHttpRequest();
       const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency}`;
       request.onload = function() {
         if (request.readyState === 4 || this.status === 200) {
@@ -14,4 +14,8 @@ export class ExchangeRate {
       request.send();
     });
   }
+}
+
+export function convert(usd, rate){
+  return usd/rate;
 }

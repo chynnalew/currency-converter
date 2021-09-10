@@ -7,66 +7,69 @@
   <title>Currency Exchange</title>
 </head>
 <body>
-<div id="header">
-  <h1>Currency Converter</h1>
-</div>
-  <div id="shape"></div>
-  <div class="row">
-    <div class="col" id="col-wide">
-      <div class="card">
-        <h2>United States Dollar Converter</h2>
-        <div class="row">
-          <div class="col col1">
-            <h3>USD to </h3>
+  <div id="header">
+    <h1>Currency Converter</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col col-8">
+        <div class="card">
+          <h2>United States Dollar Converter</h2>
+          <div class="row">
+            <div class="col col1">
+              <h3>USD to </h3>
+            </div>
+            <div class="col col2">
+              <select name="drop" id="currency">
+                <option value="EUR">EUR (Europe - Euro)</option>
+                <option value="JPY">JYP (Japan - Yen)</option>
+                <option value="GBP">GBP (UK - Pound)</option>
+                <option value="CAD">CAD (Canada - Dollar)</option>
+                <option value="CHF">CHF (Switzerland - Franc)</option>
+              </select>
+            </div>
           </div>
-          <div class="col col2">
-            <select name="drop" id="currency">
-              <option value="EUR">EUR (Europe - Euro)</option>
-              <option value="JPY">JYP (Japan - Yen)</option>
-              <option value="GBP">GBP (UK - Pound)</option>
-              <option value="CAD">CAD (Canada - Dollar)</option>
-              <option value="CHF">CHF (Switzerland - Franc)</option>
-            </select>
+          <div class="row">
+            <div class="col col1">
+              <p>$
+                <input type="number" id="userNumber1">
+              </p>
+            </div>
+            <div class="col col2" id="conversion1"></div>
           </div>
+          <button type="button" id="convert1">Convert</button>
         </div>
-        <div class="row">
-          <div class="col col1">
-            <input type="number" id="userNumber1">
+        <div class="card">
+          <h2>Conversion by Currency Code</h2>
+          <div class="row">
+            <div class="col col1">
+              <h3>USD to</h3>
+            </div>
+            <div class="col col2">
+              <input type="text" name="input" id="currency2" type="text">
+            </div>
           </div>
-          <div class="col col2" id="conversion1"></div>
+          <div class="row">
+            <div class="col col1">
+              <p>$
+                <input type="number" id="userNumber2">
+              </p>
+            </div>
+            <div class="col col2" id="conversion2"></div>
+          </div>
+          <button type="button" id="convert2">Convert</button>
         </div>
-        <button type="button" id="convert1">Convert</button>
+        
       </div>
-      <div class="card">
-        <h2>Conversion by Currency Code</h2>
-        <div class="row">
-          <div class="col col1">
-            <h3>USD to </h3>
-          </div>
-          <div class="col col2">
-            <input type="text" name="input" id="currency2" type="text">
-          </div>
+      <div class="col" id="col-narrow">
+        <h4>Country Codes</h4>
+        <div class="row card" id="codes">
+          <p id="codes2"></p>
         </div>
-        <div class="row">
-          <div class="col col1">
-            <input type="number" id="userNumber2">
-          </div>
-          <div class="col col2" id="conversion2"></div>
+        <h4>Errors</h4>
+        <div class="row card" id ="errorBox">
+          <div id="errors"></div>
         </div>
-        <button type="button" id="convert2">Convert</button>
-      </div>
-      
-    </div>
-    <div class="col" id="col-narrow">
-      <h4>Country Codes</h4>
-      <div class="row card" id="codes">
-        <p id="codes2">
-          <span id="test">Currency codes</span> <br>
-        </p>
-      </div>
-      <h4>Errors</h4>
-      <div class="row card" id ="errorBox">
-        <div id="errors"></div>
       </div>
     </div>
   </div>

@@ -32,8 +32,8 @@ $(document).ready(function() {
       .then(function(response) {
         const body = response;
         let rate = body.conversion_rates.USD;
-        let newVal = convert(usd, rate);
         let usd = $('#userNumber2').val();
+        let newVal = convert(usd, rate);
         $("#conversion2").html(newVal);
       });
   });

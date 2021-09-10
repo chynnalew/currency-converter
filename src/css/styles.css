@@ -11,9 +11,12 @@ body{
   padding: 15px;
   margin-bottom: 30px;
   border-bottom: rgb(79, 96, 100) 5px solid;
+  box-shadow: 3px 3px 10px 10px rgba(69, 76, 78, 0.192);
   font-family: 'Cabin', sans-serif;
   letter-spacing: 3px;
   padding-left: 20px;
+  border-radius: 0 0 85% 85% / 30%;
+  text-align: center;
 } 
 h1 {
   font-size: 3em;
@@ -24,8 +27,8 @@ h2, h4 {
   padding: 10px;
   margin-bottom: 10px;
   color:rgba(248, 248, 248, 0.986);
-  text-align: center;
 }
+
 button {
   display: block;
   height: 40px;
@@ -34,13 +37,18 @@ button {
   border: rgb(165, 199, 194) 3px solid;
   margin: 20px;
 }
-.card {
+.card, h4 {
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 15px;
+  box-shadow: 3px 3px 10px 10px rgba(69, 76, 78, 0.192);
+}
+.card {
+  border-radius: 10px;
 }
 .row {
   margin: 0px;
-  padding: 10px;
+  padding: 5px;
 }
 .col1 {
   text-align: right;
@@ -48,7 +56,12 @@ button {
 .col2 {
   text-align: left;
 }
-
+input {
+  width:70px;
+}
+select {
+  width:90px;
+}
 #codes {
   height: 250px;
   overflow: scroll;

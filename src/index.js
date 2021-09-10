@@ -4,9 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import {ExchangeRate, convert} from './currency.js';
 
-// function returnError() {
-  
-// }
 $(document).ready(function() {
   $('#convert1').click(function() {
     let currency = $('#currency').val();

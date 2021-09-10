@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Roboto&display=swap" rel="stylesheet">  
   <title>Currency Exchange</title>
 </head>
 <body>
-  <div class="container">
-    <div id="header">
-      <h1>Currency Converter</h1>
+<div id="header">
+  <h1>Currency Converter</h1>
+</div>
+  <div id="shape"></div>
+  <div class="row">
+    <div class="col" id="col-wide">
+      <div class="card">
+        <h2>United States Dollar Converter</h2>
+        <div class="row">
+          <div class="col col1">
+            <h3>USD to </h3>
+          </div>
+          <div class="col col2">
+            <select name="drop" id="currency">
+              <option value="EUR">EUR (Europe - Euro)</option>
+              <option value="JPY">JYP (Japan - Yen)</option>
+              <option value="GBP">GBP (UK - Pound)</option>
+              <option value="CAD">CAD (Canada - Dollar)</option>
+              <option value="CHF">CHF (Switzerland - Franc)</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col1">
+            <input type="number" id="userNumber1">
+          </div>
+          <div class="col col2" id="conversion1"></div>
+        </div>
+        <button type="button" id="convert1">Convert</button>
+      </div>
+      <div class="card">
+        <h2>Conversion by Currency Code</h2>
+        <div class="row">
+          <div class="col col1">
+            <h3>USD to </h3>
+          </div>
+          <div class="col col2">
+            <input type="text" name="input" id="currency2" type="text">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col1">
+            <input type="number" id="userNumber2">
+          </div>
+          <div class="col col2" id="conversion2"></div>
+        </div>
+        <button type="button" id="convert2">Convert</button>
+      </div>
+      
     </div>
-    <div class="card">
-      <h2>United States Dollar Converter</h2>
-      <div class="row">
-        <div class="col-6">
-          <h3>USD to </h3>
-        </div>
-        <div class="col-6">
-          <select name="drop" id="currency">
-            <option value="EUR">EUR (Europe - Euro)</option>
-            <option value="JPY">JYP (Japan - Yen)</option>
-            <option value="GBP">GBP (United Kingdom - Pound Sterling)</option>
-            <option value="CAD">CAD (Canada - Dollar)</option>
-            <option value="CHF">CHF (Switzerland - Franc)</option>
-          </select>
-        </div>
+    <div class="col" id="col-narrow">
+      <div class="row card" id="codes">
+        <h4>Currency Codes</h4>
+        <p></p>
       </div>
-      <div class="row">
-        <div class="col-6">
-          <input type="number" id="userNumber1">
-        </div>
-        <div class="col-6" id="conversion1"></div>
+      <div class="row card" id ="errorBox">
+        <h4>Errors</h4>
+        <div id="errors"></div>
       </div>
-      <button type="button" id="convert1">Convert</button>
     </div>
-    <div class="card">
-      <h2>Conversion by Currency Code</h2>
-      <div class="row">
-        <div class="col-6">
-          <h3>USD to </h3>
-        </div>
-        <div class="col-6">
-          <input type="text" name="input" id="currency2" type="text">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <input type="number" id="userNumber2">
-        </div>
-        <div class="col-6" id="conversion2"></div>
-      </div>
-      <button type="button" id="convert2">Convert</button>
-    </div>
-    <div id="errors"></div>
   </div>
 </body>
 </html>

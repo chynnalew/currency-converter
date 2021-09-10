@@ -1,0 +1,68 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url(../../assets/img/globe.jpg);
+  background-color: rgba(221, 248, 246, 0.849);
+  background-blend-mode: lighten;
+  background-size: cover;
+}
+#header {
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  margin-bottom: 30px;
+  border-bottom: rgb(79, 96, 100) 5px solid;
+  font-family: 'Cabin', sans-serif;
+  letter-spacing: 3px;
+  padding-left: 20px;
+} 
+h1 {
+  font-size: 3em;
+  font-weight: bolder;
+}
+h2, h4 {
+  background-image: url(../../assets/img/grey.png);
+  padding: 10px;
+  margin-bottom: 10px;
+  color:rgba(248, 248, 248, 0.986)
+}
+button {
+  display: block;
+  height: 40px;
+  background-color: rgb(233, 245, 239);
+  color:rgb(60, 95, 89);
+  border: rgb(165, 199, 194) 3px solid;
+  margin: 20px;
+}
+
+.card {
+ 
+  margin-bottom: 10px;
+}
+.row {
+  margin: 10px;
+}
+.col1 {
+  text-align: right;
+}
+.col2 {
+  text-align: left;
+}
+#col-wide {
+  width:70%;
+}
+#col-narrow {
+  width:30%;
+}
+#codes {
+  height: 70%;
+}
+#errorBox {
+  height: 20%;
+}
+#errors {
+  color:rgb(224, 30, 30);
+  font-weight: bolder;
+}
+.card {
+  text-align: center;
+}
